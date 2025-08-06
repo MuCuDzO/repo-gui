@@ -3,6 +3,8 @@
   hosts: demo
   tasks:
     - name: Create user
+      vars:
+        user: user1
       user:
         name: "{{ user }}"
         state: present
