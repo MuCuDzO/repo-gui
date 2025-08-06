@@ -8,5 +8,4 @@
           command: /bin/sleep 15
           async: 1000
           poll: 5
-          register: error
       become: true
