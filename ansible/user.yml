@@ -16,6 +16,10 @@
             name: curl
             update-cache: yes
           register: error
+        - name: Fail on failed
+          command: echo "FAILED"
+          register: command_result
+          failed_when: "'FAILED' in command_result.stdout"
       become: true
       rescue:
         - name: Some error print
