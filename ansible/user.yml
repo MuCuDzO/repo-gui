@@ -4,17 +4,17 @@
   tasks:
     - name: Preconfig block
       block:
-        - name: Sleep
+        - name: sleep
           command: /bin/sleep 15
           async: 1000
           poll: 0
-          register: Sleep
+          register: sleep
         - debug:
-            var: Sleep
+            var: sleep
         - name: Echo
           command: echo "DONE"
       become: true
-    - name: check Sleep status
+    - name: check sleep status
       async_status:
         jid: "{{ sleep.ansible_job_id}}"
       register: job_result
