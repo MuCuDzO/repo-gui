@@ -73,8 +73,8 @@
         - name: Добавление пользователя в группу Docker
           user:
             name: "{{ansible_user}}"
-          groups: Docker
-          append: yes
+            groups: Docker
+            append: yes
         
         - name: Перезагрузка сервера
           reboot:
