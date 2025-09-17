@@ -9,16 +9,5 @@
           async: 1000
           poll: 0
           register: sleep
-        - debug:
-            var: sleep
-        - name: Echo
-          command: echo "DONE"
       become: true
-    - name: check sleep status
-      async_status:
-        jid: "{{ sleep.ansible_job_id}}"
-      register: job_result
-      until: job_result.finished
-      retries: 100
-      delay: 1
-      become: true
+
