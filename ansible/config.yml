@@ -5,7 +5,7 @@
     - name: Установка Docker
       block:
         - name: Добавляем universe
-          apt_repository:
+          aptrepository:
             repo: "deb http://us.archive.ubuntu.com/ubuntu/ {{ ansibledistribution_release }} universe"
             state: present
 
