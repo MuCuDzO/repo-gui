@@ -49,7 +49,7 @@
         enabled: true
   become: true
 
-- name: Установка Docker-compose
+- name: Установка Docker-compose1
   block:
     - name: Получение последней версии Docker-compose
       uri:
